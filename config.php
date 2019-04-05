@@ -3,9 +3,9 @@
 $result = [
     'db'  => [
         'driver'   => 'mysql',
-        'host'     => 'php-2hw06.mac',
+        'host'     => 'php-2hw07.mac',
         'port'     => '8889',
-        'dbname'   => 'php2hw06',
+        'dbname'   => 'php2hw07',
         'userName' => 'eug',
         'password' => '123',
     ],
