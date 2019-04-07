@@ -16,16 +16,10 @@ class Admin extends Controller
             Article::getAllLast(),
             [
                 function (Article $article) {
-                    echo $article->id;
+                    return $article->id;
                 },
                 function (Article $article) {
-                    echo $article->id;
-                },
-                function (Article $article) {
-                    echo $article->id;
-                },
-                function (Article $article) {
-                    echo $article->title;
+                    return $article->title;
                 },
             ]
         );
