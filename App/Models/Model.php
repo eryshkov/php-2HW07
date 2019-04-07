@@ -51,7 +51,6 @@ abstract class Model
 
         try {
             return false;
-        } catch (\Exception $e) {
         } finally {
             throw new RecordNotFoundException($sql . ' (:id => ' . $id . ')');
         }
@@ -72,7 +71,7 @@ abstract class Model
             $sql = 'SELECT * FROM ' . static::$table . ' ORDER BY id DESC';
         }
 
-        return $db->queryEach($sql, [], static::class);
+        yield from $db->queryEach($sql, [], static::class);
     }
 
     /**
