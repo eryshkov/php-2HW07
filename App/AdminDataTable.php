@@ -27,8 +27,15 @@ class AdminDataTable
         $this->functions = $functions;
     }
     
-    public function render(): void
+    /**
+     * @return \Generator
+     */
+    public function render(): \Generator
     {
-    
+        foreach ($this->models as $model) {
+            foreach ($this->functions as $function) {
+                yield $function($model);
+            }
+        }
     }
 }
