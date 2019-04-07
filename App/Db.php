@@ -52,6 +52,21 @@ class Db
         }
     }
     
+    public function queryEach(string $sql, array $params = [], $class = null): \Generator
+    {
+        try {
+            $sth = $this->dbh->prepare($sql);
+            $sth->setFetchMode(PDO::FETCH_CLASS, $class);
+            $sth->execute($params);
+    
+            while (false !== ($result = $sth->fetch())) {
+                yield $result;
+            }
+        } catch (\Exception $e) {
+            throw new DbErrorException($e->getMessage());
+        }
+    }
+    
     /**
      * @param string $sql
      * @param array $params
