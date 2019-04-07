@@ -52,11 +52,18 @@ class Db
         }
     }
     
+    /**
+     * @param string $sql
+     * @param array $params
+     * @param null $class
+     * @return \Generator
+     * @throws DbErrorException
+     */
     public function queryEach(string $sql, array $params = [], $class = null): \Generator
     {
         try {
             $sth = $this->dbh->prepare($sql);
-            $sth->setFetchMode(PDO::FETCH_CLASS, $class);
+            $sth->setFetchMode(\PDO::FETCH_CLASS, $class);
             $sth->execute($params);
     
             while (false !== ($result = $sth->fetch())) {

@@ -4,3 +4,6 @@
 2019-04-03T01:00:16+03:00 | /Users/eugem/Developer/PHP/php-2HW06.mac/App/Db.php | 28 | App\Exceptions\DbErrorException | SQLSTATE[HY000] [1044] Access denied for user 'eug'@'localhost' to database 'php2hw064'
 2019-04-04T15:26:02+03:00 | /Users/eugem/Developer/PHP/php-2HW06.mac/index.php | 21 | App\Exceptions\ControllerNotFoundException | \App\Controllers\Jjup
 
+2019-04-07T12:36:57+03:00 | /Users/eugem/Developer/PHP/php-2HW07.mac/index.php | 21 | App\Exceptions\ControllerNotFoundException | \App\Controllers\Favicon.ico
+2019-04-07T12:36:59+03:00 | /Users/eugem/Developer/PHP/php-2HW07.mac/index.php | 21 | App\Exceptions\ControllerNotFoundException | \App\Controllers\Favicon.ico
+2019-04-07T12:37:01+03:00 | /Users/eugem/Developer/PHP/php-2HW07.mac/index.php | 21 | App\Exceptions\ControllerNotFoundException | \App\Controllers\Favicon.ico
