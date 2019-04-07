@@ -43,17 +43,18 @@
         </div>
     </div>
     <?php
-    foreach ($this->articles as $article) {
+    $dataTable = $this->dataTable->render();
+    while ($dataTable->valid()) {
         ?>
         <div class="row mb-1">
             <div class="col-auto">
-                <a class="btn btn-outline-info" href="/admin/article/edit/<?php echo $article->id; ?>">✎</a>
+                <a class="btn btn-outline-info" href="/admin/article/edit/<?php $dataTable->next(); ?>">✎</a>
             </div>
             <div class="col-auto">
-                <a class="btn btn-outline-danger" href="/admin/article/delete/<?php echo $article->id; ?>">X</a>
+                <a class="btn btn-outline-danger" href="/admin/article/delete/<?php $dataTable->next(); ?>">X</a>
             </div>
             <div class="col">
-                <a href="/article/<?php echo $article->id; ?>"><?php echo $article->title; ?></a>
+                <a href="/article/<?php $dataTable->next(); ?>"><?php $dataTable->next(); ?></a>
             </div>
         </div>
         <?php
