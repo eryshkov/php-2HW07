@@ -65,7 +65,7 @@ class Db
             $sth = $this->dbh->prepare($sql);
             $sth->setFetchMode(\PDO::FETCH_CLASS, $class);
             $sth->execute($params);
-    
+            
             while (false !== ($result = $sth->fetch())) {
                 yield $result;
             }
