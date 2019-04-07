@@ -2,12 +2,10 @@
 
 namespace App;
 
-use App\Models\Model;
-
 class AdminDataTable
 {
     /**
-     * @var Model[] $models
+     * @var iterable $models
      */
     protected $models;
     
@@ -18,10 +16,10 @@ class AdminDataTable
     
     /**
      * AdminDataTable constructor.
-     * @param Model[] $models
+     * @param iterable $models
      * @param callable[] $functions
      */
-    public function __construct($models, array $functions)
+    public function __construct(iterable $models, array $functions)
     {
         $this->models = $models;
         $this->functions = $functions;
