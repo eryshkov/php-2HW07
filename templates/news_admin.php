@@ -2,6 +2,21 @@
 /**
  * @var \App\View $this
  */
+
+use App\AdminDataTable;
+use App\Models\Article;
+
+$dataTableObj = new AdminDataTable(
+    $this->articles,
+    [
+        function (Article $article) {
+            return $article->id;
+        },
+        function (Article $article) {
+            return $article->title;
+        },
+    ]
+);
 ?>
 <!doctype html>
 <html lang="ru">
@@ -43,7 +58,7 @@
         </div>
     </div>
     <?php
-    $dataTable = $this->dataTable->render();
+    $dataTable = $dataTableObj->render();
     while ($dataTable->valid()) {
         ?>
         <div class="row mb-1">

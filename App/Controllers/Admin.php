@@ -12,18 +12,7 @@ class Admin extends Controller
      */
     protected function handle(): void
     {
-        $dataTable = new AdminDataTable(
-            Article::getAllLast(),
-            [
-                function (Article $article) {
-                    return $article->id;
-                },
-                function (Article $article) {
-                    return $article->title;
-                },
-            ]
-        );
-        $this->view->dataTable = $dataTable;
+        $this->view->articles = Article::getAllLast();
         $this->view->display(__DIR__ . '/../../templates/news_admin.php');
     }
 }

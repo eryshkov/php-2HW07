@@ -9,7 +9,6 @@ use App\Models\Article;
  * @property Article[] $articles
  * @property Article $article
  * @property string $info
- * @property AdminDataTable $dataTable
  */
 class View implements \Countable, \Iterator
 {
