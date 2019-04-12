@@ -3,7 +3,7 @@
  * @var \App\View $this
  */
 
-$dataTable = $this->dataTable->elements();
+$dataTable = $this->dataTableObj->elements();
 
 while ($dataTable->valid()) {
     ?>

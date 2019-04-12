@@ -9,7 +9,7 @@ use App\Models\Article;
  * @property Article[] $articles
  * @property Article $article
  * @property string $info
- * @property AdminDataTable $dataTable
+ * @property AdminDataTable $dataTableObj
  */
 class View implements \Countable, \Iterator
 {

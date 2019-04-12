@@ -44,7 +44,7 @@ class AdminDataTable
     public function render(string $template): string
     {
         $view = new View();
-        $view->dataTable = $this;
+        $view->dataTableObj = $this;
         return $view->render($template);
     }
 }
