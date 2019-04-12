@@ -15,6 +15,13 @@ $dataTableObj = new AdminDataTable(
         function (Article $article) {
             return $article->title;
         },
+        function (Article $article) {
+            $author = $article->author;
+            if (!isset($author)) {
+                return null;
+            }
+            return $author->name;
+        },
     ]
 );
 ?>

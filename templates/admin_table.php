@@ -23,6 +23,15 @@ while ($dataTable->valid()) {
                 $dataTable->next(); ?>
             </a>
         </div>
+        <div class="col-auto">
+            <p>
+                <?php
+                $author = $dataTable->current();
+                echo $author ?? 'без автора';
+                $dataTable->next();
+                ?>
+            </p>
+        </div>
     </div>
     <?php
 }
