@@ -28,12 +28,23 @@ class AdminDataTable
     /**
      * @return \Generator
      */
-    public function render(): \Generator
+    public function elements(): \Generator
     {
         foreach ($this->models as $model) {
             foreach ($this->functions as $function) {
                 yield $function($model);
             }
         }
+    }
+    
+    /**
+     * @param string $template
+     * @return string
+     */
+    public function render(string $template): string
+    {
+        $view = new View();
+        $view->dataTable = $this;
+        return $view->render($template);
     }
 }

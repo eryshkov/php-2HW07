@@ -13,3 +13,6 @@
 2019-04-11T09:29:30+03:00 | /Users/eugem/Developer/PHP/php-2HW07.mac/index.php | 22 | App\Exceptions\ControllerNotFoundException | \App\Controllers\Apple-touch-icon.png
 2019-04-11T14:01:57+03:00 | /Users/eugem/Developer/PHP/php-2HW07.mac/index.php | 22 | App\Exceptions\ControllerNotFoundException | \App\Controllers\Apple-touch-icon-precomposed.png
 2019-04-11T14:01:57+03:00 | /Users/eugem/Developer/PHP/php-2HW07.mac/index.php | 22 | App\Exceptions\ControllerNotFoundException | \App\Controllers\Apple-touch-icon.png
+2019-04-12T17:49:10+03:00 | /Users/eugem/Developer/PHP/php-2HW07.mac/index.php | 22 | App\Exceptions\ControllerNotFoundException | \App\Controllers\Apple-touch-icon-precomposed.png
+2019-04-12T17:49:10+03:00 | /Users/eugem/Developer/PHP/php-2HW07.mac/index.php | 22 | App\Exceptions\ControllerNotFoundException | \App\Controllers\Apple-touch-icon.png
+2019-04-12T18:27:33+03:00 | /Users/eugem/Developer/PHP/php-2HW07.mac/App/Models/Model.php | 55 | App\Exceptions\RecordNotFoundException | SELECT * FROM news WHERE id=:id (:id => 45)

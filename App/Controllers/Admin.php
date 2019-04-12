@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\AdminDataTable;
 use App\Models\Article;
 
 class Admin extends Controller

@@ -39,46 +39,13 @@ $dataTableObj = new AdminDataTable(
             <a href="/admin" class="btn btn-outline-success">Админ-Новости</a>
         </div>
     </div>
-    <?php
-    $info = $this->info;
-    if (isset($info)) {
-        ?>
-        <div class="row">
-            <div class="col-auto">
-                <div class="alert alert-danger" role="alert">
-                    <?php echo $info; ?>
-                </div>
-            </div>
-        </div>
-        <?php
-    } ?>
     <div class="row">
         <div class="col">
             <a class="btn btn-outline-primary mb-1" href="/admin/article/insert">Добавить новость</a>
         </div>
     </div>
     <?php
-    $dataTable = $dataTableObj->render();
-    while ($dataTable->valid()) {
-        ?>
-        <div class="row mb-1">
-            <div class="col-auto">
-                <a class="btn btn-outline-info" href="/admin/article/edit/<?php echo $dataTable->current(); ?>">✎</a>
-            </div>
-            <div class="col-auto">
-                <a class="btn btn-outline-danger"
-                   href="/admin/article/delete/<?php echo $dataTable->current(); ?>">X</a>
-            </div>
-            <div class="col">
-                <a href="/article/<?php echo $dataTable->current(); ?>">
-                    <?php $dataTable->next();
-                    echo $dataTable->current();
-                    $dataTable->next(); ?>
-                </a>
-            </div>
-        </div>
-        <?php
-    }
+    echo $dataTableObj->render(__DIR__ . '/admin_table.php');
     ?>
 </div>
 </body>
