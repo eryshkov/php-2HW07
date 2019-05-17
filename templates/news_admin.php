@@ -41,7 +41,7 @@ $dataTableObj = new AdminDataTable(
     </div>
     <div class="row">
         <div class="col">
-            <a class="btn btn-outline-primary mb-1" href="/admin/article/insert">Добавить новость</a>
+            <a class="btn btn-outline-primary mb-1" href="/admin/article/add">Добавить новость</a>
         </div>
     </div>
     <?php
