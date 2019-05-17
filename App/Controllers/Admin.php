@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Article;
 
-class Admin extends Controller
+class Admin extends BaseController
 {
     /**
      * @throws \App\Exceptions\DbErrorException
