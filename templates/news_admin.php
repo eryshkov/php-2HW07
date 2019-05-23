@@ -10,10 +10,14 @@ $dataTableObj = new AdminDataTable(
     $this->articles,
     [
         function (Article $article) {
-            return $article->id;
+            return $article->title;
         },
         function (Article $article) {
-            return $article->title;
+            $author = $article->author;
+            if (!isset($author)) {
+                return 'Неизвестен';
+            }
+            return $author->name;
         },
     ]
 );
