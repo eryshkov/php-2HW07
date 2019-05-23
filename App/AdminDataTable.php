@@ -12,6 +12,22 @@ class AdminDataTable
     protected $models;
     
     /**
+     * @return Model[]
+     */
+    public function getModels(): array
+    {
+        return $this->models;
+    }
+    
+    /**
+     * @return callable[]
+     */
+    public function getFunctions(): array
+    {
+        return $this->functions;
+    }
+    
+    /**
      * @var callable[] $functions
      */
     protected $functions;
@@ -33,17 +49,8 @@ class AdminDataTable
      */
     public function render(string $template): string
     {
-        $dataTableArray = [];
-        foreach ($this->models as $model) {
-            $tempArray = [];
-            foreach ($this->functions as $function) {
-                $tempArray[] = $function($model);
-            }
-            $dataTableArray[] = $tempArray;
-        }
-        
         $view = new View();
-        $view->dataTableArray = $dataTableArray;
+        $view->dataTableObj = $this;
         return $view->render($template);
     }
 }
