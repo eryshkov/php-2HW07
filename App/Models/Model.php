@@ -58,10 +58,10 @@ abstract class Model
     
     /**
      * @param int|null $limit
-     * @return \Generator
+     * @return array
      * @throws DbErrorException
      */
-    public static function getAllLast(int $limit = null): \Generator
+    public static function getAllLast(int $limit = null): array
     {
         $db = new Db();
         
@@ -71,7 +71,7 @@ abstract class Model
             $sql = 'SELECT * FROM ' . static::$table . ' ORDER BY id DESC';
         }
         
-        yield from $db->queryEach($sql, [], static::class);
+        return $db->query($sql, [], static::class);
     }
     
     /**

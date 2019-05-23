@@ -3,27 +3,22 @@
  * @var \App\View $this
  */
 
-$dataTable = $this->dataTableObj->elements();
+$dataTableArray = $this->dataTableArray;
 
-while ($dataTable->valid()) {
+foreach ($dataTableArray as $row) {
     ?>
     <div class="row mb-1">
         <div class="col-auto">
             <a class="btn btn-outline-info"
-               href="/admin/article/<?php echo $dataTable->current(); ?>/edit">✎</a>
+               href="/admin/article/<?php echo $row[0]; ?>/edit">✎</a>
         </div>
         <div class="col-auto">
             <a class="btn btn-outline-danger"
-               href="/admin/article/<?php echo $dataTable->current(); ?>/delete">X</a>
+               href="/admin/article/<?php echo $row[0]; ?>/delete">X</a>
         </div>
         <div class="col">
-            <a href="/article/<?php echo $dataTable->current(); ?>">
-                <?php $dataTable->next();
-                echo $dataTable->current();
-                $dataTable->next(); ?>
-            </a>
+            <a href="/article/<?php echo $row[0]; ?>"> <?php echo $row[1]; ?></a>
         </div>
     </div>
     <?php
 }
-?>
