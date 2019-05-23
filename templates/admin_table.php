@@ -3,9 +3,7 @@
  * @var \App\View $this
  */
 
-$dataTableArray = $this->dataTableArray;
-
-foreach ($dataTableArray as $row) {
+foreach ($this->dataTableArray as $row) {
     ?>
     <div class="row mb-1">
         <div class="col-auto">

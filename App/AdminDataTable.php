@@ -33,8 +33,6 @@ class AdminDataTable
      */
     public function render(string $template): string
     {
-        $view = new View();
-        
         $dataTableArray = [];
         foreach ($this->models as $model) {
             $tempArray = [];
@@ -43,7 +41,8 @@ class AdminDataTable
             }
             $dataTableArray[] = $tempArray;
         }
-        
+    
+        $view = new View();
         $view->dataTableArray = $dataTableArray;
         return $view->render($template);
     }
