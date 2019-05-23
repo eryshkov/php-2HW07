@@ -41,7 +41,7 @@ class AdminDataTable
             }
             $dataTableArray[] = $tempArray;
         }
-    
+        
         $view = new View();
         $view->dataTableArray = $dataTableArray;
         return $view->render($template);
