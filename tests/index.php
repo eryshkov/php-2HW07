@@ -37,6 +37,7 @@
                 <li><a href="/tests/User.php">User</a></li>
                 <li><a href="/tests/Config.php">Config</a></li>
                 <li><a href="/tests/View.php">View</a></li>
+                <li><a href="/tests/generator.php">Generator</a></li>
                 <li><a href="/log.txt">log</a></li>
             </ul>
         </div>

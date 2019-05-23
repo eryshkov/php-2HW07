@@ -21,15 +21,15 @@ abstract class Model
     public $id;
     
     /**
-     * @return array
+     * @return \Generator
      * @throws DbErrorException
      */
-    public static function findAll(): array
+    public static function findAll(): \Generator
     {
         $db = new Db();
         $sql = 'SELECT * FROM ' . static::$table;
         
-        return $db->query($sql, [], static::class);
+        return $db->queryEach($sql, [], static::class);
     }
     
     /**
